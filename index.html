@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de encuesta de FreeCodeCamp</title>
     <p> Gracias por tomarte el tiempo para ayudarnos a mejorar la plataforma.</p>
-    <form id="survey-form"></form>
+    <form id="survey-form">
     <input id="name" type="text">
     <label for="name">Ingresa tu nombre</label>
     <input id="email" type="text">
@@ -29,6 +29,33 @@
     <label> <input type="radio" name="form" value="No estoy seguro">
     No estoy seguro </label>
     <br>
+    <select id="dropdown">
+        <option> Desafios </option>
+        <option> Proyectos</option>
+        <option> Comunidad </option>
+        <option> Codigo abierto </option>
+    </select>
+    <label for="form"> Que le gustaria que mejorara? (marque todas las
+        opciones que corresponda) </label>
+        <br>
+        <select id="form" name="form" multiple size="11">
+            <option value="Proyectos front-end"> Proyectos front-end</option>
+            <option value="Proyectos back-end"> Proyectos back-end</option>
+            <option value="Visualizacion de datos"> Visualizacion de datos</option>
+            <option value="Desafios"> Desafios </option>
+            <option value="Comunidad de codigo abierto"> Comunidad de codigo abierto</option>
+            <option value="Salas de ayuda de Gitter"> Salas de ayuda de Gitter</option>
+            <option value="Videos"> Videos</option>
+            <option value="Encuentrso en la ciudad"> Encuentros en la ciudad</option>
+            <option value="Wiki"> Wiki</option>
+            <option value="Foro"> Foro</option>
+            <option value="Cursos adicionales"> Cursos adicionales</option>
+        </select>
+        <textarea id="comentarios" name="comentarios"> Algun comentario 
+            o sugerencia? </textarea>
+            <button type="submit"> Entregar </button>
+    </form>
+
 </head>
 <body>
     
