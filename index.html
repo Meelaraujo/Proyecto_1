@@ -4,60 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de encuesta de FreeCodeCamp</title>
-    <p> Gracias por tomarte el tiempo para ayudarnos a mejorar la plataforma.</p>
-    <form id="survey-form">
-    <input id="name" type="text">
-    <label for="name">Ingresa tu nombre</label>
-    <input id="email" type="text">
-    <label id="email"> Ingresa tu correo electronico</label>
-    <input for="Edad" type="text">
-    <label for="Edad">Edad</label>
-    <select id="dropdown">
-        <option> Alumno </option>
-        <option> Trabajo de tiempo completo </option>
-        <option> Estudiante a tiempo completo </option>
-        <option> Prefiero no decirlo </option>
-        <option> Otro </option> </select>
-    <p> Recomendarias FreeCodeCamp a un amigo?</p>
-    <label> 
-        <input type="radio" name="form" value="Definitivamente"> 
-    Definitivamente </label>
-    <br>
-    <label> <input  type="radio" name="form" value="Tal vez"> Tal vez
-    </label>
-    <br>
-    <label> <input type="radio" name="form" value="No estoy seguro">
-    No estoy seguro </label>
-    <br>
-    <select id="dropdown">
-        <option> Desafios </option>
-        <option> Proyectos</option>
-        <option> Comunidad </option>
-        <option> Codigo abierto </option>
-    </select>
-    <label for="form"> Que le gustaria que mejorara? (marque todas las
-        opciones que corresponda) </label>
-        <br>
-        <select id="form" name="form" multiple size="11">
-            <option value="Proyectos front-end"> Proyectos front-end</option>
-            <option value="Proyectos back-end"> Proyectos back-end</option>
-            <option value="Visualizacion de datos"> Visualizacion de datos</option>
-            <option value="Desafios"> Desafios </option>
-            <option value="Comunidad de codigo abierto"> Comunidad de codigo abierto</option>
-            <option value="Salas de ayuda de Gitter"> Salas de ayuda de Gitter</option>
-            <option value="Videos"> Videos</option>
-            <option value="Encuentrso en la ciudad"> Encuentros en la ciudad</option>
-            <option value="Wiki"> Wiki</option>
-            <option value="Foro"> Foro</option>
-            <option value="Cursos adicionales"> Cursos adicionales</option>
-        </select>
-        <textarea id="comentarios" name="comentarios"> Algun comentario 
-            o sugerencia? </textarea>
-            <button type="submit"> Entregar </button>
-    </form>
+
+    <link rel="stylesheet" href="styles.css">
 
 </head>
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center"> Formulario de encuesta de freeCodeCamp</h1>
+        <p id="description" class="description text-center"> Gracias por tomarte el tiempo para ayudarnos a mejorar la plataforma.</p>
+        </header>
 <body>
-    
+
+    <form id="survey-form">
+        <div class="form-group">
+        <label for="name">Ingresa tu nombre</label>
+        <input id="name" type="text" placeholder="Tu nombre" required> </div>
+        
+        <div class="form-group">
+        <label for="email">Ingresa tu correo electrónico</label>
+        <input id="email" type="email" placeholder="Tu correo electrónico" required> </div>
+        
+        <div class="form-group">
+        <label for="edad">Edad</label>
+        <input id="edad" type="number" placeholder="Tu edad" required></div>
+        
+        <div class="form-group">
+        <label for="dropdown-ocupacion">¿Cuál es tu ocupación?</label>
+        <select id="dropdown-ocupacion" name="ocupacion" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="alumno">Alumno</option>
+            <option value="trabajo-tiempo-completo">Trabajo de tiempo completo</option>
+            <option value="estudiante-tiempo-completo">Estudiante a tiempo completo</option>
+            <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+            <option value="otro">Otro</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <p>¿Recomendarías FreeCodeCamp a un amigo?</p>
+        <br>
+        <label>
+            <input type="radio" name="recomendacion" value="definitivamente" required> Definitivamente
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="recomendacion" value="tal-vez"> Tal vez
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="recomendacion" value="no-estoy-seguro"> No estoy seguro
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for="mejoras">¿Qué te gustaría que mejorara? (marca todas las opciones que correspondan)</label>
+        <select id="mejoras" name="mejoras" multiple size="5">
+            <option value="proyectos-front-end">Proyectos front-end</option>
+            <option value="proyectos-back-end">Proyectos back-end</option>
+            <option value="visualizacion-datos">Visualización de datos</option>
+            <option value="desafios">Desafíos</option>
+            <option value="comunidad-codigo-abierto">Comunidad de código abierto</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="comentarios">¿Algún comentario o sugerencia?</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Escribe tus comentarios aquí..."></textarea> </div>
+        
+        <div class="form-group">
+        <button type="submit">Entregar</button> </div>
+    </form>
 </body>
 </html>
